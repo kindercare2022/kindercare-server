@@ -5,7 +5,7 @@ import (
    "net/http"
    "gorm.io/gorm"
    "encoding/json"
-   "github.com/mahani-software-engineering/bms-server/db"
+   "github.com/kindercare2022/kindercare-server/db"
 )
 
 var database *gorm.DB
