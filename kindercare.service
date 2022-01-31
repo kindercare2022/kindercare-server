@@ -1,0 +1,21 @@
+[Unit]
+Description=Business management system (Victoria forest resort Kalangala)
+
+[Service]
+Type=simple
+User=root
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+Environment=PATH=/root/bms/bin/victoria-bms
+
+ExecStart=/root/bms/bin/victoria-bms resurrect
+ExecReload=/root/bms/bin/victoria-bms reload all
+ExecStop=/root/bms/bin/victoria-bms kill
+RemainAfterExit=no
+Restart=on-failure
+RestartSec=2s
+
+[Install]
+WantedBy=multi-user.target
